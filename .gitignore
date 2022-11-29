@@ -1,0 +1,9 @@
+*.pt
+.env
+.sass-cache
+music_controller/
+NLI_SAN_WEB/
+node_modules/
+index_data_sources_paragraphs_VP1_B/
+db.sqlite3
+data/
