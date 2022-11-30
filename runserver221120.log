@@ -1,5 +1,0 @@
-nohup: ignoring input
-Traceback (most recent call last):
-  File "manage.py", line 5, in <module>
-    import torch
-ModuleNotFoundError: No module named 'torch'
