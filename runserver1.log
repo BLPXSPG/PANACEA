@@ -1,126 +1,0 @@
-nohup: ignoring input
-Watching for file changes with StatReloader
-2022-11-20 17:59:20.681443: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-Some weights of the model checkpoint at roberta-large-mnli were not used when initializing RobertaForSequenceClassification: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
-- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Some weights of the model checkpoint at castorini/monot5-base-msmarco were not used when initializing T5ForConditionalGeneration: ['decoder.block.0.layer.1.EncDecAttention.relative_attention_bias.weight']
-- This IS expected if you are initializing T5ForConditionalGeneration from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing T5ForConditionalGeneration from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-2022-11-20 17:59:49 [INFO] SentenceTransformer: Load pretrained SentenceTransformer: paraphrase-MiniLM-L12-v2
-2022-11-20 17:59:49 [INFO] SentenceTransformer: Did not find folder paraphrase-MiniLM-L12-v2
-2022-11-20 17:59:49 [INFO] SentenceTransformer: Search model on server: http://sbert.net/models/paraphrase-MiniLM-L12-v2.zip
-2022-11-20 17:59:49 [INFO] SentenceTransformer: Load SentenceTransformer from folder: /home/panacea/.cache/torch/sentence_transformers/sbert.net_models_paraphrase-MiniLM-L12-v2
-2022-11-20 17:59:50 [INFO] SentenceTransformer: Use pytorch device: cuda
-System check identified some issues:
-
-WARNINGS:
-api.Claim: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.Document: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.Room: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.Sentence: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.Topic: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.TopicWords: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.TweetCount: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.TweetGraph: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.TweetMap: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.TweetSpread: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.Twitter: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-api.Vocabulary: (models.W042) Auto-created primary key used when not defining a primary key type, by default 'django.db.models.AutoField'.
-	HINT: Configure the DEFAULT_AUTO_FIELD setting or the ApiConfig.default_auto_field attribute to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'.
-
-System check identified 12 issues (0 silenced).
-[20/Nov/2022 18:00:04] "GET /search HTTP/1.1" 200 736
-[20/Nov/2022 18:00:04] "GET /api/get-claim HTTP/1.1" 200 847
-/home/panacea/anaconda3/envs/nlisan/lib/python3.7/site-packages/transformers/models/t5/tokenization_t5.py:184: UserWarning: This sequence already has </s>. In future versions this behavior may lead to duplicated eos tokens being added.
-  f"This sequence already has {self.eos_token}. In future versions this behavior may lead to duplicated eos tokens being added."
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 61.90it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 90.34it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 119.82it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 36.42it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 75.89it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 77.71it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 121.78it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 61.75it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 41.46it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 37.92it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 84.38it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 92.23it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 130.59it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 89.20it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 107.37it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 42.02it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 93.64it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 100.63it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 65.80it/s]
-Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 61.44it/s]
-[20/Nov/2022 18:00:14] "POST /api/input-query HTTP/1.1" 200 31258
-[20/Nov/2022 18:00:14] "GET /api/get-document HTTP/1.1" 200 16472
-[20/Nov/2022 18:05:00] "GET /search HTTP/1.1" 200 736
-[20/Nov/2022 18:05:00] "GET /api/get-claim HTTP/1.1" 200 847
-[20/Nov/2022 18:06:51] code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
-[20/Nov/2022 18:06:51] code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
-[20/Nov/2022 18:06:51] You're accessing the development server over HTTPS, but it only supports HTTP.
-
-[20/Nov/2022 18:06:51] You're accessing the development server over HTTPS, but it only supports HTTP.
-
-[20/Nov/2022 18:06:51] code 400, message Bad request version ('\x93/BàF\x80³q\x9cûBÔ\x84¼$»\x18þ\x19ìJÚã\x917D2\xadßN×ç\x00"**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
-[20/Nov/2022 18:06:51] code 400, message Bad request version ('èAâ\x83Èõ½\x97è:$`å8ú\x00"úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
-[20/Nov/2022 18:06:51] You're accessing the development server over HTTPS, but it only supports HTTP.
-
-[20/Nov/2022 18:06:51] You're accessing the development server over HTTPS, but it only supports HTTP.
-
-[20/Nov/2022 18:06:51] code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
-[20/Nov/2022 18:06:51] You're accessing the development server over HTTPS, but it only supports HTTP.
-
-[20/Nov/2022 18:06:51] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03å6´ò9\x02M¸\x9eÛ|T\x7fì<pZ[¡xáK5t3\x1aß¿ÑÏ\x95â')
-[20/Nov/2022 18:06:51] You're accessing the development server over HTTPS, but it only supports HTTP.
-
-[20/Nov/2022 18:06:55] code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
-[20/Nov/2022 18:06:55] code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
-[20/Nov/2022 18:06:55] You're accessing the development server over HTTPS, but it only supports HTTP.
-
-[20/Nov/2022 18:06:55] You're accessing the development server over HTTPS, but it only supports HTTP.
-
-[20/Nov/2022 18:06:55] code 400, message Bad request version ('»iã¨Ü6Þ5÷@âö\x93ÅÂ\x00"\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
-[20/Nov/2022 18:06:55] code 400, message Bad request version ('»\'tNf5\x16:\x00·®Á\x8bÌ«\x03\x0f\x18)³Ý\x00"úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
-[20/Nov/2022 18:06:55] You're accessing the development server over HTTPS, but it only supports HTTP.
-
-[20/Nov/2022 18:06:55] You're accessing the development server over HTTPS, but it only supports HTTP.
-
-[20/Nov/2022 18:06:55] code 400, message Bad request version ('localhost\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
-[20/Nov/2022 18:06:55] You're accessing the development server over HTTPS, but it only supports HTTP.
-
-[20/Nov/2022 18:06:55] code 400, message Bad request version ('3màØ\x02\x06´\x0fÑÑwø¶\x00"\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
-[20/Nov/2022 18:06:55] You're accessing the development server over HTTPS, but it only supports HTTP.
-
-[20/Nov/2022 18:07:08] "GET /search HTTP/1.1" 200 736
-[20/Nov/2022 18:07:08] "GET /static/css/index.css HTTP/1.1" 200 4858
-[20/Nov/2022 18:07:08] "GET /static/frontend/main.js HTTP/1.1" 200 6683838
-[20/Nov/2022 18:07:08] "GET /api/get-claim HTTP/1.1" 200 847
-[20/Nov/2022 18:07:08] "GET /static/images/ukri-modified.png HTTP/1.1" 200 23906
-[20/Nov/2022 18:07:08] "GET /static/images/qm-modified.png HTTP/1.1" 200 77121
-[20/Nov/2022 18:07:08] "GET /static/images/warwick.png HTTP/1.1" 200 89181
-[20/Nov/2022 18:07:08] "GET /static/images/fog.jpg HTTP/1.1" 200 3120313
-Not Found: /favicon.ico
-2022-11-20 18:07:08 [WARNING] log: Not Found: /favicon.ico
-[20/Nov/2022 18:07:08] "GET /favicon.ico HTTP/1.1" 404 3480
-[20/Nov/2022 18:07:15] "GET /search HTTP/1.1" 200 736
-[20/Nov/2022 18:07:15] "GET /static/css/index.css HTTP/1.1" 200 4858
-[20/Nov/2022 18:07:15] "GET /static/frontend/main.js HTTP/1.1" 200 6683838
-[20/Nov/2022 18:07:16] "GET /api/get-claim HTTP/1.1" 200 847
-[20/Nov/2022 18:07:16] "GET /static/images/warwick.png HTTP/1.1" 200 89181
-[20/Nov/2022 18:07:16] "GET /static/images/ukri-modified.png HTTP/1.1" 200 23906
-[20/Nov/2022 18:07:16] "GET /static/images/qm-modified.png HTTP/1.1" 200 77121
-[20/Nov/2022 18:07:16] "GET /static/images/fog.jpg HTTP/1.1" 200 3120313
