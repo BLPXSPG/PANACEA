@@ -1,31 +1,40 @@
 ## Environment
 
-For the frontend environment
+### For the backend environment
+Install Required Python Modules
+- edit the file nlisan_env2.yml and modify the last line to point to your conda path
+- execute:
+```{bash}
+cd PANACEA
+conda env create -n nlisan -f=nlisan_env2.yml
+conda activate nlisan
+pip install -r requirements.txt
+```
+
+### For the frontend environment
+Install Node Modules
 ```{bash}
 cd PANACEA/frontend
 npm i
 ```
 
-For the backend environment:
-- edit the file nlisan_env2.yml and modify the last line to point to your conda path
-- download pre-trained models nli-san_simpl4vp1.pt and datasets index_data_sources_paragraphs_VP1_B from https://zenodo.org/record/6493847#.Y4aCZ3bP1aY
-- execute:
-```{bash}
-conda env create -n nlisan -f=nlisan_env2.yml
-conda activate nlisan
-```
-
 ## Running
-Run frontend:
-```{bash}
-cd /frontend
-npm run dev
-```
 
+### Initialilse and Start Web Server
 Run backend:
 ```{bash}
 conda activate nlisan
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
+```
+
+### Compile the Front-End
+Run frontend for development
+```{bash}
+npm run dev
+```
+Run the production compile script
+```{bash}
+npm run build
 ```
