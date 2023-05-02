@@ -198,6 +198,13 @@ class InputQuery(APIView):
     throttle_classes = [UserRateThrottle]
 
     def post(self, request, format=None):
+        print("self.query = request.data[\"query\"] is -><-", request.data) # (request.data["query"]))
+        if len(request.data) == 0:
+            print("None!!!!!!!!!!!!!!!!!!!!")
+            data = {
+                    "session_reply": -1
+            }
+            return JsonResponse(data, status=status.HTTP_200_OK)
         x_forwarded_for = self.request.META.get('HTTP_X_FORWARDED_FOR')
         if x_forwarded_for:
             user_ip = x_forwarded_for.split(',')[0]
